@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Sidebar from "../sidebar/Sidebar";
 import "./landing.css";
+import {useDispatch} from "react-redux"
 import { DiscountedPrice } from "../utils/DiscountedPrice";
 import { data } from "../data/data";
+import { AddToCart } from "../../../redux/actions/ecommerse_actions/ecommerse_actions";
 
 const LandingPage = () => {
   const [products, setProducts] = useState(data);
   const [loading, setLoading] = useState(false);
+
+
+  const dispatch = useDispatch();
 
   return (
     <div style={{ display: "flex", overflow: "hidden", background: "#1C1C28" }}>
@@ -49,7 +54,7 @@ const LandingPage = () => {
                 </div>
 
                 <div className="cart__container">
-                  <button>Add To Cart</button>
+                  <button onClick={() => dispatch(AddToCart(item))}>Add To Cart</button>
                 </div>
               </Card>
             ))}

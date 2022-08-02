@@ -5,16 +5,18 @@ import { BsFillSuitHeartFill } from 'react-icons/bs'
 import './navbar.css'
 import { FaUserAlt } from 'react-icons/fa'
 import Search from '../search/Search'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <Nav>
-      <a className="home__tag" href="/home">
+        {/* <a href='/home'>
         <img
           src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
           alt="img"
         />
-      </a>
+        </a>
+       */}
 
       <Search  className='search'/>
 
@@ -25,11 +27,11 @@ const Navbar = () => {
           </div>
         </a>
 
-        <a href="/cart">
+        <Link to="/cart">
           <div className="cart">
             <BsFillCartFill style={{ fontSize: '1.2em', color : '#ffff'  }} />
           </div>
-        </a>
+        </Link>
         <a href="profile">
           <div className="user">
             <FaUserAlt style={{ fontSize: '1.2em' , color : '#ffff' }} />

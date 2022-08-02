@@ -8,7 +8,7 @@ import Navbar from '../navbar/Navbar'
 const Container = () => {
   return (
     <div >
-        <Navbar />
+     
           
         
         <LandingPage />

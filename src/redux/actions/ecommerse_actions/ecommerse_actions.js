@@ -1,4 +1,4 @@
-import { ADDAUTH } from "../../action_constants/actionConstants"
+import { ADDAUTH, ADDTOCART } from "../../action_constants/actionConstants"
 
 
 
@@ -11,4 +11,15 @@ export const addAuth = (data) => {
          type : ADDAUTH,
          payload : data,
      }
+}
+
+
+
+export const AddToCart = (data) => {
+
+       return {
+
+           type : ADDTOCART,
+           payload : data,
+       }
 }
