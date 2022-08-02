@@ -1,0 +1,44 @@
+
+body {
+
+      background-color: #000000;
+}
+
+.cart__img {
+
+      max-width: 15rem;
+      margin-top: 2em;
+      margin-bottom: 2em;
+      
+}
+
+.empty {
+
+     margin-bottom: 1em;
+     text-align: center;
+     color : #fff;
+}
+
+.shop__nowbtn {
+
+      margin-top: 1.5em;
+      border: none;
+      outline: none;
+      border-radius: 6px;
+      padding : 1.2em 2.8em;
+      color : #fff;
+      font-size: 1em;
+      font-weight: 600;
+      background-color: #AC5DD9;
+      cursor: pointer;
+}
+
+.cart__contain {
+
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-left: auto;
+     margin-right: auto;
+}
