@@ -42,7 +42,7 @@ const Sidebar = ({ products, setProducts }) => {
      
   }
   return (
-    <SidebarContainer>
+    <SidebarMain>
       {/* filters and clear button */}
       <div className="filterbtn__tab">
         <p className="filter__text">Filters</p>
@@ -118,19 +118,22 @@ const Sidebar = ({ products, setProducts }) => {
           <p>shoes</p>
         </div>
       </div>
-    </SidebarContainer>
+    </SidebarMain>
   )
 }
 
 export default Sidebar
 
-const SidebarContainer = styled.div`
+const SidebarMain = styled.div`
   min-width: 15rem;
   background: #2d2e45;
   color: #fff;
   margin: 2em 2em 0 0;
   padding: 1.3em;
   border-radius: 5px;
+  min-height : 100vh;
+  position : sticky;
+
 
   @media (max-width: 750px) {
     display: none;

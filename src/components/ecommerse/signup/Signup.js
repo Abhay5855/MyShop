@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector} from "react-redux";
 import { useHistory } from "react-router-dom";
-import { addAuth } from "../../../redux/actions/actions";
+import { addAuth } from "../../../redux/actions/ecommerse_actions/ecommerse_actions";
 
 const Signup = () => {
   const [email, setEmail] = useState("");

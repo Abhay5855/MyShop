@@ -56,6 +56,7 @@ const Nav = styled.div`
   align-items: center;
   gap: 1rem;
   flex-flow : row-wrap;
+  height : 10vh;
 
 
 

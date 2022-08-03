@@ -15,17 +15,16 @@ const LandingPage = () => {
   const dispatch = useDispatch();
 
   return (
-    <div style={{ display: "flex", overflow: "hidden", background: "#1C1C28" }}>
-      <div>
-        {/* Sidebar */}
+    <div style={{ display: "flex", background: "#1C1C28" }}>
+      
         <Sidebar products={products} setProducts={setProducts}/>
-      </div>
+     
 
       {!loading && products.length ? (
         <>
           <Container>
             {products?.map((item) => (
-              <Card>
+              <Card key={item._id}>
                 <div className="img__container">
                   <img className="product__img" src={item?.image} alt="img" loading="lazy"/>
                 </div>

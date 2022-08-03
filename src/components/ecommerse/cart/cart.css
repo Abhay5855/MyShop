@@ -33,6 +33,17 @@ body {
       cursor: pointer;
 }
 
+.productcart__name {
+    font-size: .75rem;
+    line-height: .85rem;
+    margin: .25rem 0 .5rem;
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 15rem;
+    }
+
 .cart__contain {
 
      display: flex;
@@ -41,4 +52,133 @@ body {
      align-items: center;
      margin-left: auto;
      margin-right: auto;
+}
+
+.hr__line {
+
+    border: none;
+    background: #fff;
+    height: .15rem;
+    margin: 1.5rem  0;
+}
+
+.cart__display {
+
+      display: flex;
+      /* align-items: center; */
+      /* justify-content: space-between; */
+      margin: 2em ;
+      border: 1px solid red;
+      flex: 2;
+}
+
+.cart__item {
+
+    background: #26273B;
+    border-radius: 6px;
+    border: 1px solid red;
+    width: 40vw;
+     
+}
+
+.checkout {
+
+
+}
+
+.address__cart {
+
+     display: flex;
+     padding : 1.2em;
+     align-items: center;
+     justify-content: space-between;
+     
+}
+
+
+.add__address {
+
+    outline: none;
+    border: none;
+    padding : 0.75em 1.3em;
+    border-radius: 0.375em;
+    text-align: center;
+    cursor: pointer;
+    background-color: #6302C5;
+    color: #fff; 
+    margin-right : 2em;
+    margin-left: 2em;
+
+}
+
+.change__address {
+    outline: none;
+    border: none;
+    padding : 0.75em 1.3em;
+    border-radius: 0.375em;
+    text-align: center;
+    cursor: pointer;
+    background-color: #6302C5;
+    color: #fff;
+}
+
+.product__container {
+
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     gap: 1.5rem;
+     margin-top: 0.5em;
+     border-radius: 6px;
+     padding: 1em;
+
+
+}
+
+.mycart {
+
+     color : #fff;
+     font-size : 1em;
+}
+
+
+
+
+@media (max-width : 700px){
+
+    
+.add__address {
+
+
+    padding : 0.75em 1.3em;
+   
+    margin-right : 0.5em;
+    margin-left: 0.5em;
+}
+
+.change__address {
+
+    padding : 0.75em 1.3em;
+   
+}
+
+
+.mycart {
+
+    color : #fff;
+    font-size : 0.6em;
+}
+
+.productcart__name {
+    font-size: .75rem;
+    line-height: .85rem;
+    margin: .25rem 0 .5rem;
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 8rem;
+    }
+
+
 }
