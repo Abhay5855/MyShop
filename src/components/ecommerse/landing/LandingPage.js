@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Sidebar from "../sidebar/Sidebar";
 import "./landing.css";
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
+import { RemoveFromCart } from "../../../redux/actions/ecommerse_actions/ecommerse_actions";
 import { DiscountedPrice } from "../utils/DiscountedPrice";
 import { data } from "../data/data";
 import { AddToCart } from "../../../redux/actions/ecommerse_actions/ecommerse_actions";
@@ -12,7 +13,23 @@ const LandingPage = () => {
   const [loading, setLoading] = useState(false);
 
 
+
+
+
   const dispatch = useDispatch();
+
+  const selector = useSelector((state) => state.cartReducer);
+
+
+  const AddItem = (item) => {
+
+       dispatch(AddToCart(item));
+
+      
+  }
+
+
+  console.log(selector.cartItems, 'this are cart Itesm');
 
   return (
     <div style={{ display: "flex", background: "#1C1C28" }}>
@@ -53,7 +70,12 @@ const LandingPage = () => {
                 </div>
 
                 <div className="cart__container">
-                  <button onClick={() => dispatch(AddToCart(item))}>Add To Cart</button>
+                  {/* <button onClick={() => AddItem(item)}>{add ? 'Remove From Cart'  : 'Add To Cart' }</button> */}
+
+                  {
+
+                    !selector.cartItems.find((itemID) => itemID._id === item._id)  ?  <button onClick={() => AddItem(item)} >Add To Cart</button> :  <button onClick={() =>  dispatch(RemoveFromCart(item._id))}>Remove From Cart</button>
+                  }
                 </div>
               </Card>
             ))}

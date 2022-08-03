@@ -131,8 +131,6 @@ const SidebarMain = styled.div`
   margin: 2em 2em 0 0;
   padding: 1.3em;
   border-radius: 5px;
-  min-height : 100vh;
-  position : sticky;
 
 
   @media (max-width: 750px) {

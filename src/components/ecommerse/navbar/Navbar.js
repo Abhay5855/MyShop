@@ -10,33 +10,34 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <Nav>
-        {/* <a href='/home'>
+        <Link to='/landing'>
         <img
           src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
           alt="img"
+          className='img'
         />
-        </a>
-       */}
+        </Link>
+       
 
       <Search  className='search'/>
 
       <nav className="nav">
-        <a href="/favourite">
+        <Link to="/favourite">
           <div className="heart">
             <BsFillSuitHeartFill style={{ fontSize: '1.2em', color : '#ffff' }} />
           </div>
-        </a>
+        </Link>
 
         <Link to="/cart">
           <div className="cart">
             <BsFillCartFill style={{ fontSize: '1.2em', color : '#ffff'  }} />
           </div>
         </Link>
-        <a href="profile">
+        <Link to="profile">
           <div className="user">
             <FaUserAlt style={{ fontSize: '1.2em' , color : '#ffff' }} />
           </div>
-        </a>
+        </Link>
       </nav>
 
      
